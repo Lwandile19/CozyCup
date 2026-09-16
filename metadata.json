@@ -1,0 +1,7 @@
+{
+  "name": "CozyCup - Handmade Crochet & Bracelets",
+  "description": "Handmade crochet and bracelet ordering, quoting, POPIA-compliant customer management, and FNB payment verification system with supporting AI assistant.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
+

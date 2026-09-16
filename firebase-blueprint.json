@@ -1,0 +1,145 @@
+{
+  "entities": {
+    "Customer": {
+      "title": "Customer",
+      "description": "Customer record for CozyCup boutique orders",
+      "type": "object",
+      "properties": {
+        "customer_id": { "type": "string" },
+        "full_name": { "type": "string" },
+        "email": { "type": "string", "format": "email" },
+        "phone_number": { "type": "string" },
+        "popia_consent": { "type": "boolean" },
+        "created_at": { "type": "string", "format": "date-time" },
+        "updated_at": { "type": "string", "format": "date-time" }
+      },
+      "required": ["customer_id", "full_name", "email", "phone_number", "popia_consent", "created_at"]
+    },
+    "Product": {
+      "title": "Product",
+      "description": "Handmade crochet and bracelet catalogue item",
+      "type": "object",
+      "properties": {
+        "product_id": { "type": "string" },
+        "product_name": { "type": "string" },
+        "category": { "type": "string" },
+        "price": { "type": "number" },
+        "currency": { "type": "string" },
+        "stock_quantity": { "type": "number" },
+        "availability_status": { "type": "string" },
+        "description": { "type": "string" },
+        "short_description": { "type": "string" },
+        "image_url": { "type": "string" },
+        "lead_time_days": { "type": "number" },
+        "featured": { "type": "boolean" }
+      },
+      "required": ["product_id", "product_name", "category", "price", "currency", "stock_quantity", "availability_status"]
+    },
+    "Order": {
+      "title": "Order",
+      "description": "Customer order with pricing quotation and status lifecycle",
+      "type": "object",
+      "properties": {
+        "order_id": { "type": "string" },
+        "customer_id": { "type": "string" },
+        "product_id": { "type": "string" },
+        "quantity": { "type": "number" },
+        "quoted_amount": { "type": "number" },
+        "order_status": { "type": "string" },
+        "payment_status": { "type": "string" },
+        "colour": { "type": "string" },
+        "is_special_colour": { "type": "boolean" },
+        "estimated_completion_date": { "type": "string", "format": "date-time" },
+        "estimated_completion_note": { "type": "string" },
+        "is_bigger_item": { "type": "boolean" },
+        "can_cancel": { "type": "boolean" },
+        "is_archived": { "type": "boolean" },
+        "created_at": { "type": "string", "format": "date-time" },
+        "updated_at": { "type": "string", "format": "date-time" }
+      },
+      "required": ["order_id", "customer_id", "product_id", "quantity", "quoted_amount", "order_status", "payment_status", "created_at"]
+    },
+    "Payment": {
+      "title": "Payment",
+      "description": "FNB electronic funds transfer proof and verification record",
+      "type": "object",
+      "properties": {
+        "payment_id": { "type": "string" },
+        "order_id": { "type": "string" },
+        "amount_due": { "type": "number" },
+        "currency": { "type": "string" },
+        "payment_status": { "type": "string" },
+        "payment_reference": { "type": "string" },
+        "proof_of_payment": { "type": "string" },
+        "submitted_at": { "type": "string", "format": "date-time" },
+        "verified_at": { "type": "string", "format": "date-time" },
+        "verified_by": { "type": "string" }
+      },
+      "required": ["payment_id", "order_id", "amount_due", "currency", "payment_status", "payment_reference"]
+    },
+    "Inventory": {
+      "title": "Inventory",
+      "description": "Raw crafting materials, yarn skeins, beads, and charms used in production",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "item_name": { "type": "string" },
+        "category": { "type": "string" },
+        "quantity": { "type": "number" },
+        "unit": { "type": "string" },
+        "low_stock_threshold": { "type": "number" },
+        "cost_per_unit": { "type": "number" },
+        "notes": { "type": "string" },
+        "linked_product_ids": { "type": "array" },
+        "updated_at": { "type": "string", "format": "date-time" }
+      },
+      "required": ["id", "item_name", "category", "quantity", "unit", "low_stock_threshold", "updated_at"]
+    },
+    "Quote": {
+      "title": "Quote",
+      "description": "Itemized price quote and delivery estimate for custom or catalogue orders",
+      "type": "object",
+      "properties": {
+        "quote_id": { "type": "string" },
+        "order_id": { "type": "string" },
+        "product_id": { "type": "string" },
+        "product_name": { "type": "string" },
+        "unit_price": { "type": "number" },
+        "quantity": { "type": "number" },
+        "subtotal": { "type": "number" },
+        "packaging_delivery": { "type": "number" },
+        "total_quoted_amount": { "type": "number" },
+        "currency": { "type": "string" },
+        "generated_at": { "type": "string", "format": "date-time" },
+        "valid_until": { "type": "string", "format": "date-time" }
+      },
+      "required": ["product_id", "quantity", "total_quoted_amount", "currency", "generated_at"]
+    }
+  },
+  "firestore": {
+    "/customers/{customerId}": {
+      "schema": "Customer",
+      "description": "Stores individual customer profiles with contact and POPIA consent"
+    },
+    "/products/{productId}": {
+      "schema": "Product",
+      "description": "Public product catalogue items, prices, lead times, and inventory levels"
+    },
+    "/orders/{orderId}": {
+      "schema": "Order",
+      "description": "Individual customer orders and timeline tracking"
+    },
+    "/payments/{paymentId}": {
+      "schema": "Payment",
+      "description": "Payment records and proof of payment uploads for order verification"
+    },
+    "/inventory/{itemId}": {
+      "schema": "Inventory",
+      "description": "Crafting materials, yarn, thread, and beads with stock tracking"
+    },
+    "/quotes/{quoteId}": {
+      "schema": "Quote",
+      "description": "Quotes generated for customer orders"
+    }
+  }
+}

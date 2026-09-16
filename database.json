@@ -1,0 +1,294 @@
+{
+  "customers": [
+    {
+      "customer_id": "CUST-1001",
+      "full_name": "John Smith",
+      "email": "John.smith@gmail.com",
+      "phone_number": "0812345678",
+      "popia_consent": true,
+      "created_at": "2026-09-12T10:30:00.000Z",
+      "updated_at": "2026-09-12T10:30:00.000Z"
+    },
+    {
+      "customer_id": "CUST-29248",
+      "full_name": "Ayanda Sithole",
+      "email": "ayanda@example.com",
+      "phone_number": "0831112233",
+      "popia_consent": true,
+      "created_at": "2026-09-13T15:57:10.579Z",
+      "updated_at": "2026-09-13T15:57:10.579Z"
+    }
+  ],
+  "products": [
+    {
+      "product_id": "prod-001",
+      "product_name": "CozyCup Classic Crochet Mug Cozy",
+      "category": "Crochet",
+      "price": 85,
+      "currency": "ZAR",
+      "stock_quantity": 16,
+      "availability_status": "In Stock",
+      "description": "Handcrafted 100% soft cotton yarn sleeve with a natural wooden button. Keeps your warm drinks cozy while protecting your hands from hot mugs.",
+      "short_description": "Pure cotton yarn mug sleeve with natural wooden button closure.",
+      "image_url": "https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=800&q=80",
+      "lead_time_days": 1,
+      "featured": true
+    },
+    {
+      "product_id": "prod-002",
+      "product_name": "Handmade Crochet Sunflower Bouquet",
+      "category": "Crochet",
+      "price": 180,
+      "currency": "ZAR",
+      "stock_quantity": 8,
+      "availability_status": "In Stock",
+      "description": "Everlasting crocheted sunflower bouquet with soft textured petals, detailed center seed stitch, and flexible green stems tied with satin ribbon.",
+      "short_description": "Everlasting hand-crocheted sunflower bouquet with satin ribbon.",
+      "image_url": "https://images.unsplash.com/photo-1597848212624-a19eb35e2651?auto=format&fit=crop&w=800&q=80",
+      "lead_time_days": 2,
+      "featured": true
+    },
+    {
+      "product_id": "prod-003",
+      "product_name": "Pastel Beaded Charm Bracelet",
+      "category": "Bracelets",
+      "price": 65,
+      "currency": "ZAR",
+      "stock_quantity": 24,
+      "availability_status": "In Stock",
+      "description": "Dainty handmade elastic bracelet adorned with pastel polymer clay beads, glass seed accents, and a delicate silver-plated CozyCup star charm.",
+      "short_description": "Pastel polymer beads and silver-plated star charm on stretch cord.",
+      "image_url": "https://images.unsplash.com/photo-1611591475155-42e47db98f86?auto=format&fit=crop&w=800&q=80",
+      "lead_time_days": 1,
+      "featured": true
+    },
+    {
+      "product_id": "prod-004",
+      "product_name": "Personalized Letter Friendship Bracelet",
+      "category": "Bracelets",
+      "price": 55,
+      "currency": "ZAR",
+      "stock_quantity": 35,
+      "availability_status": "In Stock",
+      "description": "Hand-woven macramé cord bracelet customizable with white-and-gold alphabet beads. Water-resistant and adjustable slide-knot fit.",
+      "short_description": "Hand-woven slide knot bracelet with personalized initial bead.",
+      "image_url": "https://images.unsplash.com/photo-1573408301185-9146fe634ad0?auto=format&fit=crop&w=800&q=80",
+      "lead_time_days": 1,
+      "featured": false
+    },
+    {
+      "product_id": "prod-005",
+      "product_name": "Crochet Plushie Strawberry Keychain",
+      "category": "Crochet",
+      "price": 75,
+      "currency": "ZAR",
+      "stock_quantity": 14,
+      "availability_status": "In Stock",
+      "description": "Cute amigurumi miniature strawberry keychain stuffed with hypoallergenic fiberfill. Features embroidered seeds and leafy calyx.",
+      "short_description": "Miniature amigurumi strawberry keychain with gold clasp.",
+      "image_url": "https://images.unsplash.com/photo-1584917865442-de89df76afd3?auto=format&fit=crop&w=800&q=80",
+      "lead_time_days": 1,
+      "featured": false
+    },
+    {
+      "product_id": "prod-006",
+      "product_name": "Bespoke Custom Crochet & Bracelet Gift Bundle",
+      "category": "Custom Orders",
+      "price": 260,
+      "currency": "ZAR",
+      "stock_quantity": 6,
+      "availability_status": "Made to Order",
+      "description": "A curated gift package including a custom color-selected crochet mug cozy, a matching handmade beaded bracelet, and a handwritten floral greeting card.",
+      "short_description": "Custom color-themed mug cozy, matching bracelet, and gift card.",
+      "image_url": "https://images.unsplash.com/photo-1549465220-1a8b9238cd48?auto=format&fit=crop&w=800&q=80",
+      "lead_time_days": 3,
+      "featured": true
+    }
+  ],
+  "orders": [
+    {
+      "order_id": "ORD-CC-5912",
+      "customer_id": "CUST-29248",
+      "customer": {
+        "customer_id": "CUST-29248",
+        "full_name": "Ayanda Sithole",
+        "email": "ayanda@example.com",
+        "phone_number": "0831112233",
+        "popia_consent": true,
+        "created_at": "2026-09-13T15:57:10.579Z",
+        "updated_at": "2026-09-13T15:57:10.579Z"
+      },
+      "product": {
+        "product_id": "prod-001",
+        "product_name": "CozyCup Classic Crochet Mug Cozy",
+        "category": "Crochet",
+        "price": 85,
+        "currency": "ZAR",
+        "image_url": "https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=800&q=80"
+      },
+      "quantity": 2,
+      "quoted_amount": 170,
+      "quote_breakdown": {
+        "order_id": "ORD-CC-5912",
+        "product_id": "prod-001",
+        "product_name": "CozyCup Classic Crochet Mug Cozy",
+        "unit_price": 85,
+        "quantity": 2,
+        "subtotal": 170,
+        "packaging_delivery": 0,
+        "total_quoted_amount": 170,
+        "currency": "ZAR",
+        "generated_at": "2026-09-13T15:57:10.579Z",
+        "valid_until": "2026-09-16T15:57:10.579Z"
+      },
+      "order_status": "Paid",
+      "payment_status": "Verified",
+      "payment_details": {
+        "bank_name": "FNB",
+        "account_name": "Ms Roseane",
+        "account_number": "63179179370",
+        "branch_code": "250655",
+        "account_type": "Cheque / Current",
+        "amount_due": 170,
+        "currency": "ZAR",
+        "payment_reference": "ORD-CC-5912",
+        "instructions": "Please use your Order ID as the payment reference and upload proof of payment once payment has been made. Your order will only begin once payment has been verified.",
+        "proof_of_payment": {
+          "reference_number": "FNB-PAY-98172",
+          "payer_name": "Ayanda Sithole",
+          "file_name": "fnb_slip.pdf",
+          "notes": "",
+          "submitted_at": "2026-09-13T15:57:14.859Z"
+        },
+        "payment_status": "Verified",
+        "submitted_at": "2026-09-13T15:57:14.859Z",
+        "verified_at": "2026-09-13T15:57:23.987Z",
+        "verified_by": "roseanemodise@gmail.com"
+      },
+      "can_cancel": false,
+      "is_archived": false,
+      "archived_at": null,
+      "timeline": [
+        {
+          "id": "evt-1789315030579-1",
+          "status": "Pending Quote",
+          "timestamp": "2026-09-13T15:57:10.579Z",
+          "note": "Order initiated by Ayanda Sithole for 2x CozyCup Classic Crochet Mug Cozy. Initial quote generated: R170.00.",
+          "actor": "Customer"
+        },
+        {
+          "id": "evt-1789315032566-quote-accept",
+          "status": "Awaiting Payment",
+          "timestamp": "2026-09-13T15:57:12.566Z",
+          "note": "Customer accepted the official quotation of R170.00. FNB payment instructions unlocked.",
+          "actor": "Customer"
+        },
+        {
+          "id": "evt-1789315034859-proof-submit",
+          "status": "Pending Verification",
+          "timestamp": "2026-09-13T15:57:14.859Z",
+          "note": "Proof of payment submitted (FNB Reference: FNB-PAY-98172). Payment is pending Business Owner verification.",
+          "actor": "Customer"
+        },
+        {
+          "id": "evt-1789315043987-payment-verified",
+          "status": "Paid",
+          "timestamp": "2026-09-13T15:57:23.987Z",
+          "note": "Business Owner verified bank deposit of R170.00. Payment Status set to Verified, Order Status set to Paid.",
+          "actor": "Business Owner"
+        }
+      ],
+      "created_at": "2026-09-13T15:57:10.579Z",
+      "updated_at": "2026-09-13T15:57:23.987Z"
+    },
+    {
+      "order_id": "ORD-CC-1001",
+      "customer_id": "CUST-1001",
+      "customer": {
+        "customer_id": "CUST-1001",
+        "full_name": "John Smith",
+        "email": "John.smith@gmail.com",
+        "phone_number": "0812345678",
+        "popia_consent": true,
+        "created_at": "2026-09-12T10:30:00.000Z",
+        "updated_at": "2026-09-12T10:30:00.000Z"
+      },
+      "product": {
+        "product_id": "prod-001",
+        "product_name": "CozyCup Classic Crochet Mug Cozy",
+        "category": "Crochet",
+        "price": 85,
+        "currency": "ZAR",
+        "image_url": "https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=800&q=80"
+      },
+      "quantity": 2,
+      "quoted_amount": 170,
+      "quote_breakdown": {
+        "order_id": "ORD-CC-1001",
+        "product_id": "prod-001",
+        "product_name": "CozyCup Classic Crochet Mug Cozy",
+        "unit_price": 85,
+        "quantity": 2,
+        "subtotal": 170,
+        "packaging_delivery": 0,
+        "total_quoted_amount": 170,
+        "currency": "ZAR",
+        "generated_at": "2026-09-12T10:35:00.000Z",
+        "valid_until": "2026-09-15T10:35:00.000Z"
+      },
+      "order_status": "Awaiting Payment",
+      "payment_status": "Awaiting Payment",
+      "payment_details": {
+        "bank_name": "FNB",
+        "account_name": "Ms Roseane",
+        "account_number": "63179179370",
+        "branch_code": "250655",
+        "account_type": "Cheque / Current",
+        "amount_due": 170,
+        "currency": "ZAR",
+        "payment_reference": "ORD-CC-1001",
+        "instructions": "Please use your Order ID as the payment reference and upload proof of payment once payment has been made. Your order will only begin once payment has been verified.",
+        "proof_of_payment": null,
+        "payment_status": "Awaiting Payment",
+        "submitted_at": null,
+        "verified_at": null,
+        "verified_by": null
+      },
+      "can_cancel": true,
+      "is_archived": false,
+      "archived_at": null,
+      "timeline": [
+        {
+          "id": "evt-1",
+          "status": "Pending Quote",
+          "timestamp": "2026-09-12T10:35:00.000Z",
+          "note": "Order initiated for 2x CozyCup Classic Crochet Mug Cozy. Calculated quote: R170.00.",
+          "actor": "Customer"
+        },
+        {
+          "id": "evt-2",
+          "status": "Quote Sent",
+          "timestamp": "2026-09-12T10:35:05.000Z",
+          "note": "System generated quote based on database price (R85.00/unit).",
+          "actor": "System"
+        },
+        {
+          "id": "evt-3",
+          "status": "Awaiting Payment",
+          "timestamp": "2026-09-12T10:36:00.000Z",
+          "note": "Customer accepted quotation. FNB banking details provided. Payment reference: ORD-CC-1001.",
+          "actor": "Customer"
+        }
+      ],
+      "created_at": "2026-09-12T10:35:00.000Z",
+      "updated_at": "2026-09-12T10:36:00.000Z"
+    }
+  ],
+  "activeSessions": {
+    "owner_sess_daf6a75bcc083af727ba8d67b38824f912f41721cf8d19cf": {
+      "email": "roseanemodise@gmail.com",
+      "role": "BUSINESS_OWNER",
+      "expiresAt": 1789401441789
+    }
+  }
+}

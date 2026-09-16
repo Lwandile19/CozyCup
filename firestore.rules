@@ -1,0 +1,57 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    function isSignedIn() {
+      return request.auth != null;
+    }
+
+    function isAuthorizedOwner() {
+      return isSignedIn() &&
+        request.auth.token.email != null &&
+        (request.auth.token.email.lower() == 'roseanemodise@gmail.com' ||
+         request.auth.token.email.lower() == 'augustlionn1108@gmail.com');
+    }
+
+    // Products: public read and owner/app updates
+    match /products/{productId} {
+      allow read, write: if true;
+    }
+
+    // Customers: public creation, read and update
+    match /customers/{customerId} {
+      allow read, write: if true;
+    }
+
+    // Orders: real-time customer and owner read, create, and update
+    match /orders/{orderId} {
+      allow read, write: if true;
+    }
+
+    // Payments: real-time payment submissions and owner verifications
+    match /payments/{paymentId} {
+      allow read, write: if true;
+    }
+
+    // Inventory: raw materials, beads, yarn, and stock levels
+    match /inventory/{itemId} {
+      allow read, write: if true;
+    }
+
+    // Quotes: individual quotes or order-linked quotes
+    match /quotes/{quoteId} {
+      allow read, write: if true;
+    }
+
+    // Settings, Calendar Events, Notifications
+    match /settings/{docId} {
+      allow read, write: if true;
+    }
+    match /calendarEvents/{eventId} {
+      allow read, write: if true;
+    }
+    match /notifications/{notifId} {
+      allow read, write: if true;
+    }
+  }
+}
